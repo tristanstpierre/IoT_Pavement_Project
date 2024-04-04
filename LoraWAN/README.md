@@ -1,0 +1,2 @@
+Created the files for the raspberry pi and esp32 lorawan communication. 
+The ports are set to match the documentation on the raspberry pi and esp32 ports, but the wiring to the lorawan module is flipped, meaning the RXD pin on the esp32 is connected to the TXD port on the lorawan module and the TXD pin on the esp32 is connected to the RXD port.
