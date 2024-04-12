@@ -4,8 +4,8 @@
 // Assign unique CS pin for the sensor, e.g., 2
 PL::ADXL355 adxl355_sensor1(2);
 float x, y, z;
-#define SAMPLES 128 // Number of samples for the FFT
-#define SAMPLING_FREQ 50.0 // Sampling frequency in Hz
+#define SAMPLES 128 // Number of acceleration samples sensor takes per loop
+#define SAMPLING_FREQ 50.0 // Sampling frequency in Hz to create appropiate delay times and to calculate frequency itself
 unsigned int samplingPeriod;
 unsigned long microseconds;
 
@@ -39,6 +39,9 @@ void loop() {
 }
 
 double getVibrationFrequency() {
+  """This function estimates the dominant frequency of the vibrations based on the statistical properties (variance) of the acceleration 
+  magnitudes measured over a set period. The assumption here is that the vibrations exhibit a fairly regular and periodic nature, allowing the 
+  variance of the magnitude of the accelerations to be a proxy for the frequency of those vibrations."""
   readData();
   
   // Calculate the magnitude of the acceleration vector
