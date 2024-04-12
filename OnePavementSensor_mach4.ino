@@ -50,7 +50,7 @@ double getVibrationFrequency() {
     readData(); // Read the accelerometer data again
     magnitude = sqrt(x * x + y * y + z * z);
     meanMagnitude += magnitude;
-    delay(1000 / SAMPLING_FREQ); // Wait for the next sample
+    delay(300 / SAMPLING_FREQ); // Wait for the next sample
   }
   meanMagnitude /= SAMPLES;
 
@@ -60,7 +60,7 @@ double getVibrationFrequency() {
     readData(); // Read the accelerometer data again
     magnitude = sqrt(x * x + y * y + z * z);
     variance += pow(magnitude - meanMagnitude, 2);
-    delay(1000 / SAMPLING_FREQ); // Wait for the next sample
+    delay(300 / SAMPLING_FREQ); // Wait for the next sample
   }
   variance /= SAMPLES;
 
