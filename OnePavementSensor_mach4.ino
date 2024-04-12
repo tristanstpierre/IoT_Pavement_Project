@@ -27,7 +27,7 @@ void setup() {
 
 void loop() {
   double frequency = getVibrationFrequency();
-  if (frequency > 1.5) { // Check if the frequency is above 2 Hz
+  if (frequency > 1.5) { // Check if the frequency is above 1.5 Hz (will chnage for real implementation)
     Serial.print("Car Detected: ");
     Serial.print(frequency);    // Print the vibration frequency
     Serial.println(" Hz");
