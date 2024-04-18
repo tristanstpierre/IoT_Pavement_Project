@@ -137,10 +137,10 @@ void loop() {
 
 
   // Convert data into valid string variables
-  String freq1String = "Sensor 1: " + String(frequency1);
-  String freq2String = "Sensor 2: " + String(frequency2);
-  String freq3String = "Sensor 3: " + String(frequency3);
-  String freq4String = "Sensor 4: " + String(frequency4);
+  String freq1String = "1:" + String(frequency1);
+  String freq2String = "2:" + String(frequency2);
+  String freq3String = "3:" + String(frequency3);
+  String freq4String = "4:" + String(frequency4);
 
 
  String allData[] = {freq1String, freq2String, freq3String, freq4String};
